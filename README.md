@@ -1,9 +1,6 @@
-- 👋 Hi, I’m Bzan9
-- Now,I have a ddos wwbsite.
-- I want to learn ethical hacking.
-- 
+- 👋 Hi, I’m Bzan9. Hãy giúp tôi được cải thiện
 
 <!---
-Fckohio/Fckohio is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Bzan9 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
