@@ -1,4 +1,47 @@
-"Who are you?"
-Ok, hôm nay tôi sẽ giải quyết một cách cụ thể và đương nhiên điều nay nó rất dễ dang thực hiện. 
-"https://play.picoctf.org/practice/challenge/142?category=1&page=1"
-Và thứ chúng ta cần phải giải quyết được mở ra 
+Chào mọi người. Tôi là Bzan9. Và điều diễn ra tiếp theo ở đây là "Bạn là ai?" Và đương nhiên vấn đề này đã được giải quyết một cách rất dễ dàng, người không học cũng sẽ biết một cách rất thành hoàng
+.
+
+Hình ảnh
+
+Và tôi sẽ truy cập đường linh theo yêu cầu
+
+Hình ảnh
+
+Và đây chính là giao diện của trang web.
+
+Ok và chúng tôi sẽ nghĩ ngay đến BurpSuite, Bởi vì trên trang web đã chỉ ra rất rõ ràng, chỉ những thằng não list mới không thể nhận ra tại sao phải dùng BurpSuite.
+
+Hình ảnh
+
+Và đây là kết quả ở trên Burp.
+
+Hình ảnh
+
+Vấn đề đầu tiên ở bên phải là quyền truy cập của người dùng PicoBrowser. Và nó rất rõ ràng, bạn không phải là một người ngu dốt?. Giải thích ngay cho cả trẻ nhỏ 3 tuổi cũng biết, đó là điều cần thiết để chuyển User-Agent thành PicoBrowser . Chỉ vậy thôi!
+
+Hình ảnh
+
+Và sau đó, 1 vấn đề mới được xuất hiện đó là trang web nó không tin tưởng chúng ta, Ok điều này lại càng đơn giản khi chúng ta giải quyết bằng cách sử dụng Referenceer-HTTP, và chúng ta dán cái liên kết của trang web mà chúng ta đang cố gắng truy cập.
+
+Hình ảnh
+
+Ok vậy vấn đề đã được giải quyết, nhưng nó lại yên sinh một vấn đề mới là trang này nó chỉ cho phép hoạt động năm 2018, và điều này cực kỳ dễ dàng khi chúng ta sử dụng DATE và cho nó về thời gian năm 2018 , bất chấp.
+
+Hình ảnh
+
+Vấn đề mới tiếp tục xảy ra khi chúng tôi chỉ cần sử dụng DNT và nó sẽ được giải quyết
+
+Hình ảnh
+
+Và tiếp tục trang web chỉ sử dụng cho người dùng ở Thụy Điển truy cập, vậy tại sao chúng ta sẽ không trở thành người dùng ở Thụy Điển? Điều này thực sự dễ dàng với X-Forwarded-For và chỉ cần gán 1 địa chỉ ip Thụy Điển bất kỳ.
+
+Hình ảnh
+
+Và vấn đề tiếp theo là sử dụng ngôn ngữ Thụy Điển, chúng tôi chỉ cần đổi mã ngôn ngữ từ tiếng Anh sang tiếng Thụy Điển. Và thế là xong
+
+Hình ảnh
+
+Tôi đã có kết quả , lá cờ của tôi sẽ là
+
+picoCTF{http_h34d3rs_v3ry_c0Ol_much_w0w_f56f58a5}
+Chúc các bạn may mắn
